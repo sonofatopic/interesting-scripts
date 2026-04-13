@@ -8,16 +8,6 @@ local  nooter = Instance.new("Part",game.Workspace)
 nooter.BrickColor = BrickColor.new("Really Red")
 nooter.Position = Vector3.new(0,250,0)
 nooter.Size = Vector3.new(10,1,10)
-local asd = Instance.new("TextButton",ScreenGui)
-asd.BackgroundColor3 = Color3.new(0,0,0)
-asd.BorderColor3 = Color3.new(0,0,0)
-asd.Name = "nooties"
-asd.Position = UDim2.new(1,-150,1,-90)
-asd.Size = UDim2.new(0,150,0,45)
-asd.Font = "SourceSansBold"
-asd.FontSize = "Size32"
-asd.Text = "Noot Noot!"
-asd.TextColor3 = Color3.new(255,255,255)
 nooter.Touched:connect(function(pp)
 		if not game.Players[pp.Parent.Name] then return end
 if didpingu == false then
