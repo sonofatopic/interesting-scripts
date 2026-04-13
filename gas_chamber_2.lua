@@ -1,6 +1,6 @@
- hitler = game.Players.LocalPlayer
+hitler = game.Players["YOURNAME"]
 
-hitler.Character.Name = "Adolf Hitler"
+hitler.Character.Humanoid.DisplayName = "Adolf Hitler"
 
 if hitler.Character:FindFirstChild("Shirt") then hitler.Character.Shirt:Destroy()
 end
@@ -33,7 +33,8 @@ v:Destroy()
 end
 end
 
-game:GetObjects("rbxassetid://504338270")[1].Parent=game.Players.LocalPlayer.Character
+
+hitler.Humanoid:AddAccessory(10912180)
 wait(0.1)
 hitler.Character.MilitaryOfficer.Par1.Transparency = 0
 hitler.Character.MilitaryOfficer.Par2.Transparency = 0
@@ -613,7 +614,7 @@ wait(0.2)
 
 game.Workspace.Chamber.Head.Anchored = true
 game.Workspace.Chamber.Head.CanCollide = false
-game.Workspace.Chamber:MoveTo(game.Players.LocalPlayer.Character.Torso.Position + game.Players.LocalPlayer.Character.Torso.CFrame.lookVector* 30)
+game.Workspace.Chamber:MoveTo(hitler.Character.Torso.Position + hitler.Character.Torso.CFrame.lookVector* 30)
 
 Gas = Instance.new("Sound")
 Gas.Parent = game.Workspace
@@ -624,7 +625,7 @@ Gas.Name = "Sound"
 
 local ChatService = game:GetService("Chat")
 local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
+local LocalPlayer = hitler
 local To = game.Workspace.Chamber.GasPoint
 
 local ShirtID = 234346150
@@ -649,7 +650,7 @@ end
 Humanoids={}
 
 for _, Player in pairs(Players:GetPlayers()) do
-	if Player.Character and Player ~= LocalPlayer then
+	if Player.Character and Player ~= hitler then
 		-- local Shirt = GetShirt(Player)
 		-- local Pants = GetPants(Player)
 		
@@ -683,7 +684,7 @@ end
 
 local animation = Instance.new("Animation")
 animation.AnimationId = "http://www.roblox.com/Asset?ID=466780804"
-local animTrack = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(animation)
+local animTrack = hitler.Character.Humanoid:LoadAnimation(animation)
 animTrack:Play()
 
 wait(4)
