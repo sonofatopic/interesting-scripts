@@ -1,4 +1,4 @@
-hitler = game.Players["YOURNAME"]
+hitler = game.Players["YOURNAMEHERE"]
 
 hitler.Character.Humanoid.DisplayName = "Adolf Hitler"
 
@@ -34,7 +34,7 @@ end
 end
 
 
-hitler.Humanoid:AddAccessory(10912180)
+hitler.Character.Humanoid:AddAccessory(game:GetService("InsertService"):LoadAsset(10912180))
 wait(0.1)
 hitler.Character.MilitaryOfficer.Par1.Transparency = 0
 hitler.Character.MilitaryOfficer.Par2.Transparency = 0
