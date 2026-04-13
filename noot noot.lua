@@ -1,15 +1,13 @@
-
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
 local msg = Instance.new("Message",workspace)
-msg.Text = "Created by c00lkidd."
-wait(2)
+msg.Text = "Created by memz."
+task.wait(2)
 msg:Destroy()
-pingudecal = "http://www.roblox.com/asset/?id=382332426"
+local pingudecal = "http://www.roblox.com/asset/?id=382332426"
 local didpingu = false
-local ScreenGui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
-ScreenGui.Name = "nooties"
+local  nooter = Instance.new("Part",game.Workspace)
+nooter.BrickColor = BrickColor.new("Really Red")
+nooter.Position = Vector3.new(0,250,0)
+nooter.Size = Vector3.new(10,1,10)
 local asd = Instance.new("TextButton",ScreenGui)
 asd.BackgroundColor3 = Color3.new(0,0,0)
 asd.BorderColor3 = Color3.new(0,0,0)
@@ -20,7 +18,8 @@ asd.Font = "SourceSansBold"
 asd.FontSize = "Size32"
 asd.Text = "Noot Noot!"
 asd.TextColor3 = Color3.new(255,255,255)
-asd.MouseButton1Down:connect(function()
+nooter.Touched:connect(function(pp)
+		if not game.Players[pp.Parent.Name] then return end
 if didpingu == false then
 didpingu = true
 for i,v in pairs(game.Players:GetChildren()) do
