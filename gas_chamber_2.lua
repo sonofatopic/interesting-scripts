@@ -33,14 +33,9 @@ v:Destroy()
 end
 end
 
-
-hitler.Character.Humanoid:AddAccessory(game:GetService("InsertService"):LoadAsset(10912180))
 wait(0.1)
-hitler.Character.MilitaryOfficer.Par1.Transparency = 0
-hitler.Character.MilitaryOfficer.Par2.Transparency = 0
-hitler.Character.MilitaryOfficer.Par3.Transparency = 0
-hitler.Character["Shirt"].ShirtTemplate = "http://www.roblox.com/asset/?id=148902702"
-hitler.Character["Pants"].PantsTemplate = "http://www.roblox.com/asset/?id=148901946"
+hitler.Character["Shirt"].ShirtTemplate = "http://www.roblox.com/asset/?id=115580338574230"
+hitler.Character["Pants"].PantsTemplate = "http://www.roblox.com/asset/?id=139139435413385"
 hitler.Character.Head.BrickColor = BrickColor.new(1)
 hitler.Character.Torso.BrickColor = BrickColor.new(1)
 hitler.Character["Left Arm"].BrickColor = BrickColor.new(1)
@@ -610,7 +605,7 @@ coroutine.resume(cors[i])
 end
 
 
-wait(0.2)
+task.wait(0.2)
 
 game.Workspace.Chamber.Head.Anchored = true
 game.Workspace.Chamber.Head.CanCollide = false
@@ -677,7 +672,7 @@ for _, Player in pairs(Players:GetPlayers()) do
 		end
 	end
 end
-wait(9)
+task.wait(9)
 for _, Humanoid in pairs(Humanoids) do
 	Humanoid:Destroy()
 end
@@ -687,9 +682,9 @@ animation.AnimationId = "http://www.roblox.com/Asset?ID=466780804"
 local animTrack = hitler.Character.Humanoid:LoadAnimation(animation)
 animTrack:Play()
 
-wait(4)
+task.wait(4)
 
 Gas:Pause()
 Gas:Destroy()
-wait(4)
+task.wait(4)
 game.Workspace.Chamber:Destroy()
